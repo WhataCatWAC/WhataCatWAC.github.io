@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAC语学习 - J组Starter单元</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .course-card {
+            transition: all 0.3s ease;
+            perspective: 1000px;
+        }
+        .course-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .course-card:hover .course-card-inner {
+            transform: rotateY(10deg);
+        }
+        .lesson-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+    <header class="bg-indigo-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">WAC语学习中心</h1>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-indigo-200">首页</a></li>
+                    <li><a href="about.html" class="hover:text-indigo-200">简介</a></li>
+                    <li><a href="learn.html" class="font-semibold underline">学习</a></li>
+                    <li><a href="exam.html" class="hover:text-indigo-200">考级</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-2">J组 Starter单元</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">从基础开始学习WAC语字母系统</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- 字母课程卡片 -->
+            <div class="course-card" onclick="showLesson('letters')">
+                <div class="course-card-inner bg-white rounded-xl shadow-md overflow-hidden h-full cursor-pointer">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="text-indigo-600 text-4xl font-bold mb-4">Aa</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">字母学习</h3>
+                        <p class="text-gray-600 flex-grow">掌握WAC语基础字母的发音和书写</p>
+                        <div class="mt-4 text-indigo-600 font-medium">点击查看 →</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 发音课程卡片 -->
+            <div class="course-card" onclick="showLesson('pronunciation')">
+                <div class="course-card-inner bg-white rounded-xl shadow-md overflow-hidden h-full cursor-pointer">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="text-indigo-600 text-4xl font-bold mb-4">/a/</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">发音规则</h3>
+                        <p class="text-gray-600 flex-grow">学习WAC语基础发音规则和技巧</p>
+                        <div class="mt-4 text-indigo-600 font-medium">点击查看 →</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 词汇课程卡片 -->
+            <div class="course-card" onclick="showLesson('vocabulary')">
+                <div class="course-card-inner bg-white rounded-xl shadow-md overflow-hidden h-full cursor-pointer">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="text-indigo-600 text-4xl font-bold mb-4">词</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">基础词汇</h3>
+                        <p class="text-gray-600 flex-grow">学习50个最常用的WAC语词汇</p>
+                        <div class="mt-4 text-indigo-600 font-medium">点击查看 →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 字母课程内容 -->
+        <div id="letters" class="lesson-content bg-white rounded-xl shadow-lg p-8 mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">WAC语字母系统</h3>
+                <button onclick="hideLesson('letters')" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
+                <div class="text-center p-4 bg-indigo-50 rounded-lg">
+                    <div class="text-6xl font-bold text-indigo-600 mb-2">A</div>
+                    <p class="text-gray-700">发音: /a/</p>
+                    <p class="text-sm text-gray-500 mt-2">例: Ama (爱)</p>
+                </div>
+                <!-- 其他字母卡片... -->
+            </div>
+
+            <div class="flex justify-between items-center">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">练习建议</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>每天练习书写字母5遍</li>
+                        <li>听录音并跟读字母发音</li>
+                        <li>尝试拼读示例单词</li>
+                    </ul>
+                </div>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition">
+                    下载字母表
+                </button>
+            </div>
+        </div>
+
+        <!-- 其他课程内容区域... -->
+    </main>
+
+    <footer class="bg-indigo-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 WAC语官方委员会 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        function showLesson(id) {
+            // 隐藏所有课程内容
+            document.querySelectorAll('.lesson-content').forEach(el => {
+                el.style.display = 'none';
+            });
+            // 显示选中的课程
+            document.getElementById(id).style.display = 'block';
+            // 滚动到课程内容
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
+
+        function hideLesson(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
