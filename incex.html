@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAC语官方网站</title>
+    <style>
+        :root {
+            --primary: #1E5F8C;
+            --secondary: #3A9AD9;
+            --accent: #F2A516;
+            --dark: #0D2B45;
+            --light: #F0F4F8;
+        }
+        body {
+            margin: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+            background: 
+                linear-gradient(45deg, var(--light) 25%, transparent 25%) 0 0,
+                linear-gradient(135deg, var(--secondary) 25%, transparent 25%) 0 0;
+            background-size: 100px 100px;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background-color: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: var(--secondary);
+        }
+        .main-content {
+            padding: 2rem 0;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .news-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-title {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .news-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .regulation-list {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+        .regulation-item {
+            margin-bottom: 0.5rem;
+        }
+        .exam-levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .level-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .level-title {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">WAC语简介</a></li>
+                    <li><a href="#">WAC语学习</a></li>
+                    <li><a href="#">WAC语考级</a></li>
+                    <li><a href="#">WAC语制作人员</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="section">
+            <h2 class="section-title">最新动态</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <h3 class="news-title">2025年WAC语考级报名开始</h3>
+                    <p>2025年2月WAC语考级报名通道已开启，欢迎参加...</p>
+                    <a href="#" class="news-link">阅读更多 →</a>
+                </div>
+                <div class="news-card">
+                    <h3 class="news-title">新版WAC语学习资料发布</h3>
+                    <p>新增WAC语学习资料包，包含音频和练习...</p>
+                    <a href="#" class="news-link">阅读更多 →</a>
+                </div>
+                <div class="news-card">
+                    <h3 class="news-title">WAC语官方网站改版上线</h3>
+                    <p>全新改版的WAC语官方网站正式上线...</p>
+                    <a href="#" class="news-link">阅读更多 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">WAC语考级等级</h2>
+            <div class="exam-levels">
+                <div class="level-card">
+                    <h3 class="level-title">Junior组 (J组)</h3>
+                    <p>不考听力</p>
+                    <p>成绩永久有效</p>
+                </div>
+                <div class="level-card">
+                    <h3 class="level-title">Senior组 (S组)</h3>
+                    <p>考听力</p>
+                    <p>成绩永久有效</p>
+                </div>
+                <div class="level-card">
+                    <h3 class="level-title">HaderSenior组 (HS组)</h3>
+                    <p>题面全WAC语</p>
+                    <p>成绩前50%颁发证书</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">WAC语考级条例</h2>
+            <ol class="regulation-list">
+                <li class="regulation-item">考试等级分为J组、S组和HS组三个等级</li>
+                <li class="regulation-item">J组不考听力，S组和HS组考听力</li>
+                <li class="regulation-item">所有组别都不考口语</li>
+                <li class="regulation-item">HS组题面全部使用WAC语</li>
+                <li class="regulation-item">所有考试成绩永久有效</li>
+                <li class="regulation-item">每年2月和7月各举行两次考试</li>
+                <li class="regulation-item">考试形式为网上考试</li>
+                <li class="regulation-item">成绩前50%的考生将获得证书</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 WAC语官方委员会 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
