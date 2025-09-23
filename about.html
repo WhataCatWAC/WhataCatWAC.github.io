@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAC语简介</title>
+    <style>
+        :root {
+            --primary: #1E5F8C;
+            --secondary: #3A9AD9;
+            --accent: #F2A516;
+            --dark: #0D2B45;
+            --light: #F0F4F8;
+        }
+        body {
+            margin: 0;
+            font-family: 'Noto Sans SC', sans-serif;
+            background: 
+                linear-gradient(45deg, var(--light) 25%, transparent 25%) 0 0,
+                linear-gradient(135deg, var(--secondary) 25%, transparent 25%) 0 0;
+            background-size: 100px 100px;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background-color: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: var(--secondary);
+        }
+        .main-content {
+            padding: 2rem 0;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .intro-content {
+            line-height: 1.8;
+        }
+        .intro-content p {
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-title {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html" class="active">WAC语简介</a></li>
+                    <li><a href="learn.html">WAC语学习</a></li>
+                    <li><a href="exam.html">WAC语考级</a></li>
+                    <li><a href="team.html">WAC语制作人员</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="section">
+            <h2 class="section-title">WAC语简介</h2>
+            <div class="intro-content">
+                <p>WAC语是一种创新的语言系统，旨在促进跨文化交流与理解。它融合了多种语言的特点，形成了独特的语法结构和词汇体系。</p>
+                <p>WAC语的设计理念是简洁、高效和包容，适合不同文化背景的学习者快速掌握。它不仅是一种交流工具，更是一种文化桥梁。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">WAC语特点</h2>
+            <div class="feature-list">
+                <div class="feature-card">
+                    <h3 class="feature-title">简洁语法</h3>
+                    <p>WAC语采用简洁的语法结构，减少了复杂的变形规则，使学习更加高效。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">文化包容</h3>
+                    <p>融合多种语言元素，尊重不同文化背景，促进全球交流。</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">实用性强</h3>
+                    <p>注重实际交流需求，词汇选择贴近日常生活和工作场景。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">发展历程</h2>
+            <div class="intro-content">
+                <p>WAC语由国际语言研究团队于2024年开始研发，经过多次迭代和完善，于2025年正式发布1.0版本。</p>
+                <p>目前WAC语已在全球0个国家和地区推广使用，拥有超过1学习者，并建立了完善的考级认证体系。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 WAC语官方委员会 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
